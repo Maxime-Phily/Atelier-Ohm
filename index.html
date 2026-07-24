@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atelier Ohm — Réparation téléphones & ordinateurs</title>
+<title>Atelier Ohm — Réparation ordinateurs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -300,49 +300,15 @@
   .info-block{margin-bottom:26px;}
   .info-block .lbl{font-family:'JetBrains Mono'; font-size:0.74rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--copper-bright); margin-bottom:6px; display:block;}
   .info-block .val{font-size:1.05rem;}
-  
-  /* Boutons de contact direct */
-  .contact-actions{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-    justify-content:center;
+  form{display:flex; flex-direction:column; gap:16px;}
+  label{font-family:'JetBrains Mono'; font-size:0.76rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-soft); margin-bottom:6px; display:block;}
+  input, select, textarea{
+    width:100%; background:var(--ink-soft); border:1px solid var(--ink-line);
+    color:var(--paper); padding:12px 14px; border-radius:3px; font-family:'Inter'; font-size:0.95rem;
   }
-  .btn-contact{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    padding:18px 24px;
-    border-radius:4px;
-    font-weight:600;
-    font-size:1rem;
-    text-decoration:none;
-    transition:transform .2s, background .2s, border-color .2s;
-    text-align:center;
-  }
-  .btn-contact svg{
-    width:20px;
-    height:20px;
-  }
-  .btn-sms{
-    background:var(--copper);
-    color:var(--ink);
-  }
-  .btn-sms:hover{
-    background:var(--copper-bright);
-    transform:translateY(-2px);
-  }
-  .btn-mail{
-    background:transparent;
-    color:var(--paper);
-    border:1px solid var(--ink-line);
-  }
-  .btn-mail:hover{
-    border-color:var(--copper-bright);
-    color:var(--copper-bright);
-    transform:translateY(-2px);
-  }
+  input:focus, select:focus, textarea:focus{outline:none; border-color:var(--copper);}
+  textarea{resize:vertical; min-height:90px;}
+  .field{display:flex; flex-direction:column;}
 
   footer{
     border-top:1px solid var(--ink-line);
@@ -385,6 +351,7 @@
       <a href="#process">Comment ça marche</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#avis">Avis</a>
+      <a href="telephones.html">Téléphones</a>
     </nav>
     <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
   </div>
@@ -395,7 +362,7 @@
     <div>
       <span class="eyebrow">Diagnostic offert · réponse sous 24h</span>
       <h1>On répare ce qui <em>ne s'allume plus.</em></h1>
-      <p class="lede">Téléphones, ordinateurs, écrans cassés, pannes logicielles ou matérielles : diagnostic honnête réalisé sous 24h et offert, devis fixe avant toute intervention.</p>
+      <p class="lede">Ordinateurs portables et fixes, écrans cassés, pannes logicielles ou matérielles : diagnostic honnête réalisé sous 24h et offert, devis fixe avant toute intervention.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
         <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
@@ -411,13 +378,13 @@
           <div class="num">N° 00482</div>
         </div>
       </div>
-      <div class="ticket-row"><span>Appareil</span><span>iPhone 13</span></div>
-      <div class="ticket-row"><span>Panne signalée</span><span>Écran fissuré</span></div>
-      <div class="ticket-row"><span>Diagnostic</span><span>Dalle + vitre à remplacer</span></div>
+      <div class="ticket-row"><span>Appareil</span><span>PC portable Lenovo</span></div>
+      <div class="ticket-row"><span>Panne signalée</span><span>Ne s'allume plus</span></div>
+      <div class="ticket-row"><span>Diagnostic</span><span>Bloc d'alimentation HS</span></div>
       <div class="ticket-row"><span>Délai diagnostic</span><span>24h · offert</span></div>
       <div class="ticket-status">
         <span class="num">Devis fixe avant travaux</span>
-        <span class="price">79&nbsp;€</span>
+        <span class="price">89&nbsp;€</span>
       </div>
     </div>
   </div>
@@ -438,9 +405,9 @@
         </div>
         <div class="service-text">
           <h3>Écrans cassés</h3>
-          <p>Smartphones, tablettes, PC portables — vitre et dalle remplacées.</p>
+          <p>PC portables toutes marques — vitre et dalle remplacées.</p>
         </div>
-        <div class="service-tag"><span class="lbl">À partir de</span>60&nbsp;€</div>
+        <div class="service-tag"><span class="lbl">À partir de</span>69&nbsp;€</div>
       </div>
 
       <div class="service-item">
@@ -448,10 +415,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="7" width="10" height="10" rx="1.5"/><line x1="16" y1="10" x2="18" y2="10"/><line x1="16" y1="14" x2="18" y2="14"/></svg>
         </div>
         <div class="service-text">
-          <h3>Batterie qui ne tient plus</h3>
+          <h3>Batterie PC portable qui ne tient plus</h3>
           <p>Remplacement toutes marques, autonomie testée avant restitution.</p>
         </div>
-        <div class="service-tag"><span class="lbl">À partir de</span>30&nbsp;€</div>
+        <div class="service-tag"><span class="lbl">À partir de</span>39&nbsp;€</div>
       </div>
 
       <div class="service-item">
@@ -471,7 +438,7 @@
         </div>
         <div class="service-text">
           <h3>Panne matérielle PC</h3>
-          <p>Carte mère, disque dur, RAM, alimentation, ventilation. Devis gratuit et prix des composants a changé.</p>
+          <p>Carte mère, disque dur, RAM, alimentation, ventilation.</p>
         </div>
         <div class="service-tag"><span class="lbl">Sur devis</span>Gratuit</div>
       </div>
@@ -482,7 +449,7 @@
         </div>
         <div class="service-text">
           <h3>Amélioration de composant ordinateur</h3>
-          <p>SSD, RAM, carte graphique — on fait évoluer un ordinateur qui rame. Devis gratuit et prix des composants a améliorer.</p>
+          <p>SSD, RAM, carte graphique — on fait évoluer un ordinateur qui rame.</p>
         </div>
         <div class="service-tag"><span class="lbl">Sur devis</span>Gratuit</div>
       </div>
@@ -495,7 +462,7 @@
           <h3>Entretien & optimisation</h3>
           <p>Dépoussiérage interne, pâte thermique, mise à jour des pilotes.</p>
         </div>
-        <div class="service-tag"><span class="lbl">À partir de</span>20&nbsp;€</div>
+        <div class="service-tag"><span class="lbl">À partir de</span>39&nbsp;€</div>
       </div>
 
       <div class="service-item">
@@ -503,10 +470,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M9.5 6.5l5 3-5 3"/></svg>
         </div>
         <div class="service-text">
-          <h3>Film de protection anti-espion & anti-choc / film de protection transparent <span class="mono" style="font-size:0.72rem; color:var(--copper-bright); text-transform:uppercase; letter-spacing:0.04em;">option</span></h3>
-          <p>Écran invisible de côté pour préserver votre vie privée, renforcé contre les chocs et les micro-rayures.</p>
+          <h3>Film de protection anti-espion & anti-choc <span class="mono" style="font-size:0.72rem; color:var(--copper-bright); text-transform:uppercase; letter-spacing:0.04em;">option</span></h3>
+          <p>Filtre de confidentialité pour écran de PC portable, invisible de côté et renforcé contre les chocs et micro-rayures.</p>
         </div>
-        <div class="service-tag"><span class="lbl">En option</span>+ 15&nbsp;€</div>
+        <div class="service-tag"><span class="lbl">En option</span>+ 19&nbsp;€</div>
       </div>
     </div>
   </div>
@@ -557,16 +524,12 @@
       </div>
       <hr>
       <div class="rline">
-        <span class="desc">Écran iPhone<small>Vitre + dalle, toutes générations</small></span>
-        <span class="amt">dès 60&nbsp;€</span>
+        <span class="desc">Écran PC portable<small>Vitre + dalle, toutes marques</small></span>
+        <span class="amt">dès 69&nbsp;€</span>
       </div>
       <div class="rline">
-        <span class="desc">Écran Samsung / Android<small>Vitre + dalle</small></span>
-        <span class="amt">dès 70&nbsp;€</span>
-      </div>
-      <div class="rline">
-        <span class="desc">Batterie smartphone<small>Remplacement + test d'autonomie</small></span>
-        <span class="amt">dès 30&nbsp;€</span>
+        <span class="desc">Batterie PC portable<small>Remplacement + test d'autonomie</small></span>
+        <span class="amt">dès 39&nbsp;€</span>
       </div>
       <div class="rline">
         <span class="desc">Diagnostic<small>Toutes pannes, logiciel ou matériel</small></span>
@@ -574,11 +537,15 @@
       </div>
       <div class="rline">
         <span class="desc">Option film anti-espion & anti-choc<small>Posé au moment de la réparation</small></span>
-        <span class="amt">+ 15&nbsp;€</span>
+        <span class="amt">+ 19&nbsp;€</span>
+      </div>
+      <div class="rline">
+        <span class="desc">Formatage & réinstallation<small>Sauvegarde des données incluse</small></span>
+        <span class="amt">49&nbsp;€</span>
       </div>
       <div class="rline">
         <span class="desc">Nettoyage interne PC<small>Dépoussiérage + pâte thermique</small></span>
-        <span class="amt">20&nbsp;€</span>
+        <span class="amt">39&nbsp;€</span>
       </div>
       <hr>
       <div class="receipt-note">Devis gratuit systématique avant toute réparation payante.</div>
@@ -595,8 +562,8 @@
     <div class="notes-grid">
       <div class="note">
         <div class="stars">★★★★★</div>
-        <p>Écran d'iPhone changé en moins d'une heure pendant que je faisais mes courses. Prix annoncé au téléphone, prix payé sur place.</p>
-        <div class="who">— Claire M.</div>
+        <p>Écran de mon PC portable changé en une journée. Prix annoncé avant l'intervention, aucune surprise à la restitution.</p>
+        <div class="who">— Claire M., Paris 11e</div>
       </div>
       <div class="note">
         <div class="stars">★★★★★</div>
@@ -619,39 +586,48 @@
       <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); font-weight:700; margin-bottom:30px;">Passez, appelez, ou écrivez.</h2>
 
       <div class="info-block">
-        <span class="lbl">Téléphone</span>
-        <span class="val">07 66 28 68 64</span>
+        <span class="lbl">Adresse</span>
+        <span class="val">12 rue des Artisans, 75011 Paris</span>
       </div>
       <div class="info-block">
-        <span class="lbl">Horaires de prise de rendez vous </span>
-        <span class="val">Disponible toute la semaine</span>
-        <span class="lbl" style="margin-top:12px;">Horaires de prise en charge</span>
-        <span class="val">Ce fait par message</span>
+        <span class="lbl">Téléphone</span>
+        <span class="val">01 84 20 33 12</span>
+      </div>
+      <div class="info-block">
+        <span class="lbl">Horaires</span>
+        <span class="val">Lundi – Samedi, 9h30 – 19h</span>
       </div>
       <div class="info-block">
         <span class="lbl">E-mail</span>
-        <span class="val">philymaxime88@gmail.com</span>
+        <span class="val">bonjour@atelier-ohm.fr</span>
       </div>
     </div>
 
-    <!-- Remplacement du formulaire par les boutons directes -->
-    <div class="contact-actions">
-      <a href="sms:+33766286864?body=Bonjour,%20je%20souhaiterais%20prendre%20un%20rendez-vous%20pour%20une%20réparation." class="btn-contact btn-sms">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Prendre RDV par Message (SMS)
-      </a>
-
-      <a href="mailto:philymaxime88@gmail.com?subject=Prise%20de%20rendez-vous%20-%20Atelier%20Ohm&body=Bonjour,%0A%0AJe%20souhaite%20prendre%20un%20rendez-vous%20pour%20faire%20réparer%20mon%20appareil.%0A%0AAppareil%20:%20%0APanne%20constatée%20:%20%0A%0AMerci!" class="btn-contact btn-mail">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Prendre RDV par Email
-      </a>
-    </div>
+    <form onsubmit="return false;">
+      <div class="field">
+        <label for="name">Nom</label>
+        <input id="name" type="text" placeholder="Votre nom">
+      </div>
+      <div class="field">
+        <label for="device">Appareil concerné</label>
+        <select id="device">
+          <option>Ordinateur portable</option>
+          <option>Ordinateur de bureau</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="issue">Décrivez la panne</label>
+        <textarea id="issue" placeholder="Ex : l'ordinateur ne démarre plus depuis hier, aucun bruit au démarrage..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer la demande</button>
+    </form>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-inner">
-    <span class="mono">© 2026 Atelier Ohm — Réparation téléphones & ordinateurs</span>
+    <span class="mono">© 2026 Atelier Ohm — Réparation ordinateurs</span>
     <span class="mono">Diagnostic offert · réalisé sous 24h</span>
   </div>
 </footer>

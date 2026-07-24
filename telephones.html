@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Ohm — Réparation téléphones (bientôt disponible)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2028;
+    --ink-soft:#262D38;
+    --ink-line: rgba(245,241,232,0.14);
+    --paper:#F5F1E8;
+    --copper:#C97B3D;
+    --copper-bright:#E0964F;
+    --sage:#7A9B7E;
+    --text-soft: rgba(245,241,232,0.66);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;}
+
+  header.nav{
+    border-bottom:1px solid var(--ink-line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px;
+    max-width:1180px; margin:0 auto;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk'; font-weight:700; font-size:1.15rem;
+  }
+  .logo .mark{width:30px;height:30px;flex-shrink:0;}
+  .nav-links{display:flex; gap:32px; font-size:0.92rem; color:var(--text-soft);}
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--copper-bright);}
+
+  main{
+    flex:1;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    padding:60px 28px;
+  }
+  .stub{
+    position:relative;
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:6px;
+    padding:46px 44px 40px;
+    max-width:460px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
+    transform:rotate(-1deg);
+  }
+  .stub::after{
+    content:"";
+    position:absolute; left:-9px; top:50%; transform:translateY(-50%);
+    width:18px; height:18px; border-radius:50%;
+    background:var(--ink); box-shadow: 400px 0 0 var(--ink);
+  }
+  .stub .num{font-family:'JetBrains Mono'; font-size:0.78rem; color:rgba(27,32,40,0.5); margin-bottom:18px;}
+  .stub .icon{margin:0 auto 20px; width:52px; height:52px;}
+  .stamp{
+    display:inline-block;
+    border:2.5px solid var(--sage);
+    color:var(--sage);
+    font-family:'JetBrains Mono'; font-weight:700; font-size:0.72rem;
+    letter-spacing:0.08em; text-transform:uppercase;
+    padding:6px 14px; border-radius:4px;
+    transform:rotate(-4deg);
+    margin-bottom:20px;
+  }
+  .stub h1{
+    font-family:'Space Grotesk'; font-weight:700; font-size:1.7rem;
+    margin-bottom:14px; line-height:1.15;
+  }
+  .stub p{font-size:0.98rem; color:rgba(27,32,40,0.7); margin-bottom:26px;}
+  .back{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--copper); color:var(--ink);
+    font-weight:600; font-size:0.92rem;
+    padding:12px 22px; border-radius:3px;
+    text-decoration:none;
+    transition:background .2s, transform .2s;
+  }
+  .back:hover{background:var(--copper-bright); transform:translateY(-2px);}
+
+  footer{
+    border-top:1px solid var(--ink-line);
+    padding:26px 0;
+    text-align:center;
+  }
+  footer .mono{font-size:0.78rem; color:var(--text-soft);}
+
+  @media (max-width:560px){
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <svg class="mark" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="#C97B3D" stroke-width="1.6"/>
+        <path d="M9 16a7 7 0 0 1 14 0" stroke="#C97B3D" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M9 16v4M23 16v4" stroke="#C97B3D" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Atelier Ohm
+    </div>
+    <nav class="nav-links">
+      <a href="atelier-ohm.html#services">Services</a>
+      <a href="atelier-ohm.html#tarifs">Tarifs</a>
+      <a href="atelier-ohm.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="stub">
+    <div class="num">N° 00000</div>
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#C97B3D" stroke-width="1.6">
+      <rect x="7" y="2" width="10" height="20" rx="2"/>
+      <line x1="11" y1="18" x2="13" y2="18"/>
+    </svg>
+    <div class="stamp">Arrive prochainement</div>
+    <h1>Réparation téléphones</h1>
+    <p>Cette page est en préparation. En attendant, on répare vos ordinateurs — portables et fixes, logiciel ou matériel.</p>
+    <a href="atelier-ohm.html" class="back">Voir les réparations ordinateur</a>
+  </div>
+</main>
+
+<footer>
+  <span class="mono">© 2026 Atelier Ohm</span>
+</footer>
+
+</body>
+</html>
