@@ -38,23 +38,9 @@
     letter-spacing:-0.01em;
   }
   .mono{font-family:'JetBrains Mono',monospace;}
-  a{color:inherit;}
+  a{color:inherit; text-decoration: none;}
   img,svg{display:block;max-width:100%;}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
-
-  /* ---------- utility: perforation / ticket edge ---------- */
-  .perf-top{
-    position:relative;
-  }
-  .perf-top::before{
-    content:"";
-    position:absolute;
-    top:0;left:0;right:0;
-    height:1px;
-    background-image:radial-gradient(circle, rgba(245,241,232,0.35) 1.5px, transparent 1.6px);
-    background-size:16px 100%;
-    background-repeat:repeat-x;
-  }
 
   a:focus-visible, button:focus-visible, .btn:focus-visible{
     outline:2px solid var(--copper-bright);
@@ -87,11 +73,9 @@
     background:var(--copper); color:var(--ink);
     font-weight:600; font-size:0.88rem;
     padding:9px 18px; border-radius:3px;
-    text-decoration:none;
     transition:background .2s, transform .2s;
   }
   .nav-cta:hover{background:var(--copper-bright); transform:translateY(-1px);}
-  .burger{display:none;}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -121,23 +105,30 @@
     font-style:normal; color:var(--copper-bright);
   }
   .hero p.lede{
-    font-size:1.12rem; color:var(--text-soft); max-width:46ch; margin-bottom:36px;
+    font-size:1.12rem; color:var(--text-soft); max-width:46ch; margin-bottom:0;
   }
-  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
-  .btn{
-    display:inline-flex; align-items:center; gap:10px;
-    padding:14px 26px; border-radius:3px;
-    font-weight:600; font-size:0.95rem;
-    text-decoration:none; border:1px solid transparent;
+  
+  /* Boutons Agrandis */
+  .btn-lg{
+    display:inline-flex; align-items:center; justify-content:center; gap:12px;
+    padding:18px 32px; border-radius:6px;
+    font-weight:700; font-size:1.1rem;
+    border:2px solid var(--copper-bright);
+    background:var(--ink-soft);
+    color:var(--paper);
     transition:transform .2s, background .2s, border-color .2s;
     cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
   }
-  .btn-primary{background:var(--copper); color:var(--ink);}
-  .btn-primary:hover{background:var(--copper-bright); transform:translateY(-2px);}
-  .btn-ghost{border-color:rgba(245,241,232,0.3); color:var(--paper);}
-  .btn-ghost:hover{border-color:var(--copper-bright); color:var(--copper-bright);}
+  .btn-lg svg{width:24px; height:24px; flex-shrink:0;}
+  .btn-lg:hover{
+    background:var(--copper); 
+    color:var(--ink);
+    border-color:var(--copper);
+    transform:translateY(-3px);
+  }
 
-  /* --- ticket stamp visual (signature element) --- */
+  /* --- ticket stamp visual --- */
   .ticket{
     position:relative;
     background:var(--paper);
@@ -204,7 +195,7 @@
   .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem); font-weight:700;}
   .section-head p{color:var(--text-soft); margin-top:14px; font-size:1.02rem;}
 
-  /* ---------- SERVICES (ticket line items) ---------- */
+  /* ---------- SERVICES ---------- */
   .services{background:var(--ink-soft); border-top:1px solid var(--ink-line); border-bottom:1px solid var(--ink-line);}
   .service-list{border-top:1px solid var(--ink-line);}
   .service-item{
@@ -252,7 +243,7 @@
   .process-step h3{font-size:1.05rem; font-weight:600; margin-bottom:8px;}
   .process-step p{color:var(--text-soft); font-size:0.92rem;}
 
-  /* ---------- PRICING (receipt) ---------- */
+  /* ---------- PRICING ---------- */
   .pricing{background:var(--ink-soft); border-top:1px solid var(--ink-line); border-bottom:1px solid var(--ink-line);}
   .receipt{
     max-width:560px; margin:0 auto;
@@ -294,21 +285,21 @@
   .note .stars{color:var(--copper-bright); font-size:0.85rem; margin-bottom:10px; letter-spacing:2px;}
 
   /* ---------- CONTACT ---------- */
-  .contact-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:60px;
+  .contact-wrapper{
+    display:flex; flex-direction:column; align-items:center; text-align:center; max-width:800px; margin:0 auto;
   }
-  .info-block{margin-bottom:26px;}
+  .info-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; width:100%; margin:36px 0 44px; text-align:left;
+  }
+  .info-block{
+    background:var(--ink-soft); padding:20px; border-radius:6px; border:1px solid var(--ink-line);
+  }
   .info-block .lbl{font-family:'JetBrains Mono'; font-size:0.74rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--copper-bright); margin-bottom:6px; display:block;}
   .info-block .val{font-size:1.05rem;}
-  form{display:flex; flex-direction:column; gap:16px;}
-  label{font-family:'JetBrains Mono'; font-size:0.76rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-soft); margin-bottom:6px; display:block;}
-  input, select, textarea{
-    width:100%; background:var(--ink-soft); border:1px solid var(--ink-line);
-    color:var(--paper); padding:12px 14px; border-radius:3px; font-family:'Inter'; font-size:0.95rem;
+  
+  .direct-actions-lg{
+    display:flex; gap:20px; justify-content:center; flex-wrap:wrap; width:100%;
   }
-  input:focus, select:focus, textarea:focus{outline:none; border-color:var(--copper);}
-  textarea{resize:vertical; min-height:90px;}
-  .field{display:flex; flex-direction:column;}
 
   footer{
     border-top:1px solid var(--ink-line);
@@ -323,7 +314,7 @@
     .nav-links{display:none;}
     .process-grid{grid-template-columns:1fr 1fr; row-gap:36px;}
     .process-step:nth-child(2)::after{display:none;}
-    .contact-grid{grid-template-columns:1fr;}
+    .info-grid{grid-template-columns:1fr;}
     .notes-grid{grid-template-columns:1fr;}
     .service-item{grid-template-columns:44px 1fr; }
     .service-tag{grid-column:1/-1; text-align:left; padding-left:70px; margin-top:-8px;}
@@ -331,6 +322,8 @@
   @media (max-width:560px){
     .process-grid{grid-template-columns:1fr;}
     .process-step::after{display:none !important;}
+    .direct-actions-lg{flex-direction:column;}
+    .btn-lg{width:100%;}
   }
 </style>
 </head>
@@ -353,7 +346,7 @@
       <a href="#avis">Avis</a>
       <a href="telephones.html">Téléphones</a>
     </nav>
-    <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+    <a href="#contact" class="nav-cta">Me contacter</a>
   </div>
 </header>
 
@@ -363,10 +356,6 @@
       <span class="eyebrow">Diagnostic offert · réponse sous 24h</span>
       <h1>On répare ce qui <em>ne s'allume plus.</em></h1>
       <p class="lede">Ordinateurs portables et fixes, écrans cassés, pannes logicielles ou matérielles : diagnostic honnête réalisé sous 24h et offert, devis fixe avant toute intervention.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
-        <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
-      </div>
     </div>
 
     <div class="ticket" aria-hidden="false">
@@ -548,7 +537,7 @@
       <div class="note">
         <div class="stars">★★★★★</div>
         <p>Écran de mon PC portable changé en une journée. Prix annoncé avant l'intervention, aucune surprise à la restitution.</p>
-        <div class="who">— Claire M., Paris 11e</div>
+        <div class="who">— Claire M.,</div>
       </div>
       <div class="note">
         <div class="stars">★★★★★</div>
@@ -565,48 +554,36 @@
 </section>
 
 <section id="contact">
-  <div class="wrap contact-grid">
-    <div>
-      <span class="section-tag">Nous trouver</span>
-      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem); font-weight:700; margin-bottom:30px;">Passez, appelez, ou écrivez.</h2>
+  <div class="wrap contact-wrapper">
+    <span class="section-tag">Contact direct</span>
+    <h2>Passez à l'atelier ou écrivez-nous</h2>
+    <p style="color:var(--text-soft); margin-top:8px;">Cliquez ci-dessous pour ouvrir un message pré-rempli sur votre téléphone ou ordinateur.</p>
 
       <div class="info-block">
-        <span class="lbl">Adresse</span>
-        <span class="val">12 rue des Artisans, 75011 Paris</span>
-      </div>
-      <div class="info-block">
         <span class="lbl">Téléphone</span>
-        <span class="val">01 84 20 33 12</span>
+        <span class="val">07 66 28 68 64</span>
       </div>
       <div class="info-block">
-        <span class="lbl">Horaires</span>
-        <span class="val">Lundi – Samedi, 9h30 – 19h</span>
+        <span class="lbl">Horaires de demandes de RDV </span>
+        <span class="val">Lundi – Dimanche, 9h30 – 19h</span>
       </div>
       <div class="info-block">
         <span class="lbl">E-mail</span>
-        <span class="val">bonjour@atelier-ohm.fr</span>
+        <span class="val">philymaxime88@gmail.com</span>
       </div>
     </div>
 
-    <form onsubmit="return false;">
-      <div class="field">
-        <label for="name">Nom</label>
-        <input id="name" type="text" placeholder="Votre nom">
-      </div>
-      <div class="field">
-        <label for="device">Appareil concerné</label>
-        <select id="device">
-          <option>Ordinateur portable</option>
-          <option>Ordinateur de bureau</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="issue">Décrivez la panne</label>
-        <textarea id="issue" placeholder="Ex : l'ordinateur ne démarre plus depuis hier, aucun bruit au démarrage..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer la demande</button>
-    </form>
+    <!-- Gros boutons avec messages pré-remplis -->
+    <div class="direct-actions-lg">
+      <a href="sms:0184203312?body=Bonjour%20Atelier%20Ohm,%20je%20souhaite%20un%20renseignement%20pour%20la%20r%C3%A9paration%20de%20mon%20ordinateur." class="btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Envoyer un SMS
+      </a>
+      <a href="mailto:bonjour@atelier-ohm.fr?subject=Demande%20de%20r%C3%A9paration%20ordinateur&body=Bonjour%20Atelier%20Ohm,%0A%0AJe%20vous%20contacte%20concernant%20mon%20ordinateur%20:%0A-%20Mod%C3%A8le%20:%20%0A-%20Description%20du%20probl%C3%A8me%20:%20%0A%0AMerci%20d'avance%20!" class="btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Envoyer un E-mail
+      </a>
+    </div>
   </div>
 </section>
 
