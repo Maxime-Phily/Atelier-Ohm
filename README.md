@@ -1,0 +1,2 @@
+# Atelier-Ohm
+Atelier Ohm est un atelier spécialisé dans la réparation de téléphones, tablettes et PC. Il propose un diagnostic gratuit sous 24h et un devis fixe sans surprise. Écrans cassés, batteries, pannes matérielles, nettoyage de virus ou upgrade de composants : chaque appareil est réparé en toute transparence, avec prise de RDV directe par SMS/e-mail.
